@@ -9,7 +9,7 @@ export default function Groups() {
       <Topbar />
       <div className="homeContainer">
         <Sidebar />
-        <div className="wrapper">GROUPS</div>
+        <div className="wrapper">GROUPSsjbsjsjks</div>
         <Rightbar />
       </div>
     </>
