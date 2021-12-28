@@ -12,48 +12,86 @@ import {
 } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <ul className="sidebarList">
-          <li className="sidebarListItem">
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/"
+            className="sidebarListItem"
+          >
             <RssFeed className="sidebarIcon" />
-            <span className="sidebarListItemText">Feed</span>
-          </li>
-          <li className="sidebarListItem">
+            Feed
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/messenger"
+            className="sidebarListItem"
+          >
             <Chat className="sidebarIcon" />
-            <span className="sidebarListItemText">Chats</span>
-          </li>
-          <li className="sidebarListItem">
+            Chats
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/videos"
+            className="sidebarListItem"
+          >
             <PlayCircleFilledOutlined className="sidebarIcon" />
-            <span className="sidebarListItemText">Videos</span>
-          </li>
-          <li className="sidebarListItem">
+            Videos
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/groups"
+            className="sidebarListItem"
+          >
             <Group className="sidebarIcon" />
-            <span className="sidebarListItemText">Groups</span>
-          </li>
-          <li className="sidebarListItem">
+            Groups
+          </Link>
+
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/bookmarks"
+            className="sidebarListItem"
+          >
             <Bookmark className="sidebarIcon" />
-            <span className="sidebarListItemText">Bookmarks</span>
-          </li>
-          <li className="sidebarListItem">
+            Bookmarks
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/questions"
+            className="sidebarListItem"
+          >
             <HelpOutline className="sidebarIcon" />
-            <span className="sidebarListItemText">Questions</span>
-          </li>
-          <li className="sidebarListItem">
+            Questions
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/jobs"
+            className="sidebarListItem"
+          >
             <WorkOutline className="sidebarIcon" />
-            <span className="sidebarListItemText">Jobs</span>
-          </li>
-          <li className="sidebarListItem">
+            Jobs
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/events"
+            className="sidebarListItem"
+          >
             <Event className="sidebarIcon" />
-            <span className="sidebarListItemText">Events</span>
-          </li>
-          <li className="sidebarListItem">
+            Events
+          </Link>
+          <Link
+            style={{ color: "#000", textDecoration: "none" }}
+            to="/courses"
+            className="sidebarListItem"
+          >
             <School className="sidebarIcon" />
-            <span className="sidebarListItemText">Courses</span>
-          </li>
+            Courses
+          </Link>
         </ul>
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />

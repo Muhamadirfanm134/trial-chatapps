@@ -54,4 +54,7 @@
   list-style: none;
 }
 
+.sidebarListItem:active{
+  color:#1877f2;
+}
 
