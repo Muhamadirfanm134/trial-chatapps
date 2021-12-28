@@ -1,0 +1,23 @@
+{
+  "name": "trial-chat-apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node api/index",
+    "server": "nodemon api/index",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pandubhaskara/trial-chatapps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pandubhaskara/trial-chatapps/issues"
+  },
+  "homepage": "https://github.com/pandubhaskara/trial-chatapps#readme"
+}

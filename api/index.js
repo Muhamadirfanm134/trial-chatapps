@@ -53,6 +53,16 @@ app.use("/api/posts", postRoute);
 app.use("/api/conversations", conversationRoute);
 app.use("/api/messages", messageRoute);
 
+//deployment
+__dirname = path.resolve();
+if(process.env.NODE_ENV=="production"){
+  app.use(express.static(path.join(__dirname,"/client/build")))
+}else{
+  app.get("/", (req,res)=>{
+    res.send("API is running....")
+  })
+}
+
 app.listen(8800, () => {
   console.log("Backend server is running!");
 });
