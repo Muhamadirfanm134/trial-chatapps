@@ -12,6 +12,7 @@ const conversationRoute = require("./routes/conversations");
 const messageRoute = require("./routes/messages");
 const router = express.Router();
 const path = require("path");
+const port = process.env.PORT || 8800
 
 dotenv.config();
 
@@ -57,12 +58,16 @@ app.use("/api/messages", messageRoute);
 __dirname = path.resolve();
 if(process.env.NODE_ENV=="production"){
   app.use(express.static(path.join(__dirname,"/client/build")))
+  
+  app.get('*', (req,res)=>{
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  })
 }else{
   app.get("/", (req,res)=>{
     res.send("API is running....")
   })
 }
 
-app.listen(8800, () => {
-  console.log("Backend server is running!");
+app.listen(port, () => {
+  console.log(`Backend server running on port ${port}`);
 });
