@@ -23,6 +23,9 @@ mongoose.connect(
     console.log("Connected to MongoDB");
   }
 );
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //socketio
